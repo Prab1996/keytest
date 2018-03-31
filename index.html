@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.onkeydown = function(event){
+            let key_press = string.fromCharCode(event.keyCode);
+            let key_code = event.keyCode;
+            document.getElementById('kp').innerHTML = key_press;
+            document.getElementById('kc').innerHTML = key_code;
+            var status = document.getElementById('status');
+            status.innerHTML = "down" 
+        }
+        document.onkeyup = function(event) {
+            status.innerHTML = "up"
+        }
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+</head>
+
+<body>
+    <div>
+        <p>The key is : <span id="kp"></span></p>
+        <p>The key code is : <span id="kc"></span></p>
+        <p>Current status of key is : <span id="status"></span></p>
+    </div>
+
+</body>
+</html>
