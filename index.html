@@ -3,15 +3,14 @@
 <head>
     <script>
         document.onkeydown = function(event){
-            let key_press = string.fromCharCode(event.keyCode);
-            let key_code = event.keyCode;
-            document.getElementById('kp').innerHTML = key_press;
-            document.getElementById('kc').innerHTML = key_code;
-            var status = document.getElementById('status');
-            status.innerHTML = "down" 
+            var key_press = String.fromCharCode(event.keyCode); //takes pressed key code in string form, string form gives the key
+            var key_code = event.keyCode; //takes pressed key in numerical form as keycode number
+            document.getElementById('kp').innerHTML = key_press; //changes html
+            document.getElementById('kc').innerHTML = key_code; //changes html
+            document.getElementById('status').innerHTML = "down"; // changes html when key pressed
         }
         document.onkeyup = function(event) {
-            status.innerHTML = "up"
+            document.getElementById('status').innerHTML = "up"; //changes html when key released
         }
     </script>
 <meta charset="UTF-8">
